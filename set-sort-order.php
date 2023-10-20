@@ -34,6 +34,27 @@ function sso_sort_the_archives( $query ) {
 				$query->set( 'order', get_option( 'sso_taxonomy_' . $tax_slug . '_sort_dir' ) );
 			}
 		}
+
+		if ( is_archive() ) {
+			$post_type_slug     = null;
+			$current_term = get_queried_object();
+
+			if ( isset( $current_term->query_var ) ) {
+				$post_type_slug = $current_term->query_var;
+			} else {
+				return;
+			}
+
+			if ( 'Default' === get_option( 'sso_post_type_' . $post_type_slug . '_sort_by' ) ) {
+				return;
+			}
+
+			$query->set( 'orderby', get_option( 'sso_post_type_' . $post_type_slug . '_sort_by' ) );
+
+			if ( 'Default' !== get_option( 'sso_post_type_' . $post_type_slug . '_sort_dir' ) ) {
+				$query->set( 'order', get_option( 'sso_post_type_' . $post_type_slug . '_sort_dir' ) );
+			}
+		}
 	}
 
 }

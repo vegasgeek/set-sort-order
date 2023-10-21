@@ -17,3 +17,7 @@ A WordPress plugin for when you want to control the sort order for post types an
 This plugin works for the archive page for CPTs and Taxonomies. If you are using a page builder or another plugin that allows for displaying posts, it may not work for you. If you decide to submit an issue, please provide information about the plugin or page builder you're using and I'll do my best to make it work.
 
 Also, if you see a way to improve the plugin, pull requests are welcome.
+
+## Options page example
+
+![set-sort-order-options-screenshot](https://github.com/vegasgeek/set-sort-order/assets/367562/12d5299c-4cc7-4a37-902f-f8c225632797)

@@ -5,10 +5,10 @@
 */
 function sso_register_settings_page() {
     add_options_page(
-        'Set Sort Orders Options',
-        'Set Sort Orders',
+        'Set Sort Order Options',
+        'Set Sort Order',
         'manage_options',
-        'set-sort-orders',
+        'set-sort-order',
         'set_sort_orders_options'
     );
 }
